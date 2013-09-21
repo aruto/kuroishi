@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920050602) do
+ActiveRecord::Schema.define(version: 20130921144957) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20130920050602) do
     t.string   "user"
     t.string   "hashed_password"
     t.boolean  "administrator"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "my_maps", force: true do |t|
+    t.string   "member_id"
+    t.string   "integer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
